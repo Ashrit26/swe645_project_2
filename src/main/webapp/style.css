@@ -1,0 +1,71 @@
+ .required-label:after {
+            content:"*";
+            color:red;
+        }
+                body {
+                    background-color: #FFFF80
+                }
+        		form {
+        			max-width: 650px;
+        			margin: 0 auto;
+        			padding: 20px;
+        			background-color: #4FFFB0;
+        			border-radius: 10px;
+        			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        			font-family: Arial, sans-serif;
+        		}
+        		/* Style the dropdown list */
+                select {
+                  width: 100%;
+                  padding: 12px 20px;
+                  margin: 8px 0;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
+                }
+
+                /* Style the dropdown list label */
+                label {
+                  font-weight: bold;
+                }
+                /* Style the form */
+
+
+                /* Style the form group label */
+                .form-group label {
+                  font-weight: bold;
+                }
+
+                /* Style the form control */
+                .form-control {
+                  width: 100%;
+                  padding: 12px 20px;
+                  margin: 8px 0;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
+                }
+
+                /* Style the submit button */
+                .btn-primary {
+                  background-color: #007bff;
+                  border: none;
+                }
+
+                /* Style the cancel button */
+                .btn-secondary {
+                  background-color: #6c757d;
+                  border: none;
+                }
+                .button-home {
+                background-color: #C14916;
+                border: none;
+                color: white;
+                padding: 20px 34px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                margin: 4px 2px;
+                cursor: pointer;
+                }
