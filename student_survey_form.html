@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Survey Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Custom CSS -->
+</head>
+<body>
+<div class="container">
+<a href="http://swe645-assignment-1.s3-website-us-east-1.amazonaws.com/" class="button-home">Home Page</a>
+  <h1 style="text-align:center">Student Survey Form</h1>
+  <form>
+    <div class="form-group">
+      <label class="required-label" for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" name="firstName"  placeholder="First Name" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label" for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label" for="address">Street Address</label>
+      <input type="text" class="form-control" id="address" name="address" placeholder="Street Address" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label" for="city">City</label>
+      <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label" for="state">State</label>
+      <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label" for="zip">Zip</label>
+      <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip code" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label" for="phone">Telephone Number</label>
+      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telephone Number" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label" for="email">E-mail</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email ID" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label" for="date">Date of Survey</label>
+      <input type="date" class="form-control" id="date" name="date" required>
+    </div>
+    <div class="form-group">
+      <label class="required-label">What did you like most about the campus?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="like[]" value="students">
+        <label class="form-check-label">Students</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="like[]" value="location">
+        <label class="form-check-label">Location</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="like[]" value="campus">
+        <label class="form-check-label">Campus</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="like[]" value="atmosphere">
+        <label class="form-check-label">Atmosphere</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="like[]" value="dorm_rooms">
+        <label class="form-check-label">Dorm rooms</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="like[]" value="sports">
+        <label class="form-check-label">Sports</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="required-label">How you became interested in the University?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="like[]" value="friends">
+        <label class="form-check-label">Friends</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="like[]" value="television">
+        <label class="form-check-label">Television</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="like[]" value="internet">
+        <label class="form-check-label">Internet</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="like[]" value="others">
+        <label class="form-check-label">Others</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="required-label">Select the likelihood of recommending this school to other prospective students</label>
+      <select id="recommendation" name="recommendation">
+        <option value="">--Please select an option--</option>
+        <option value="very-likely">Very Likely</option>
+        <option value="likely">Likely</option>
+        <option value="unlikely">Unlikely</option>
+      </select>
+    </div>
+      <div class="form-group">
+        <label for="raffle">Raffle Numbers (comma separated)</label>
+        <input type="text" class="form-control" id="raffle" name="raffle" placeholder="Enter at least ten numbers ranging from 1 through 100">
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional Comments</label>
+        <textarea class="form-control" id="comments" name="comments" rows="5"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary">Cancel</button>
+      </div>
+
+
+  </form>
+</div>
+
+</body>
+</html>
