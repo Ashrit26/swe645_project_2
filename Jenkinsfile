@@ -1,4 +1,4 @@
-]pipeline {
+pipeline {
     environment {
         registry = "ashritmr/studentsurvey645"
         registryCredential = 'Docker-Hub'
