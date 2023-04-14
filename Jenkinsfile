@@ -1,10 +1,6 @@
 pipeline {
     environment {
-        registry = "ashritmr/studentsurvey645"
-        registryCredential = 'Docker-Hub'
         DOCKERHUB_PASS = credentials('Docker-Hub')
-        TIMESTAMP = new Date().format("yyyyMMdd_HHmmss")
-        //PASS=credentials('password')
     }
     agent any
 
@@ -17,12 +13,8 @@ pipeline {
                         sh 'jar -cvf swe645-assignment1.war -C src/main/webapp/ .'
                         sh 'echo ${BUILD_TIMESTAMP}'
                         
-                        sh 'docker login -u ashritmr -p "Ashu&1234"'
+                        sh 'docker login -u ashritmr -p ${DOCKER_PASS}'
                         sh 'docker build -t ashritmr/studentsurvey645:${BUILD_TIMESTAMP} .'
-                        //sh 'docker push ashritmr/studentsurvey645:${BUILD_TIMESTAMP}'
-                        //docker.withRegistry('',registryCredential){
-                            //def customImage = docker.build("ashritmr/studentsurvey645:${env.TIMESTAMP}")
-                        //}
 
                    }
                 }
@@ -31,9 +23,6 @@ pipeline {
             stage('Push to Docker Hub') {
                 steps {
                     script {
-//                         docker.withRegistry('',registryCredential){
-//                           sh "docker push ashritmr/studentsurvey645:${BUILD_TIMESTAMP}"
-//                        }
                         sh 'docker push ashritmr/studentsurvey645:${BUILD_TIMESTAMP}'
 
                     }
