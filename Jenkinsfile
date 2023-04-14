@@ -4,6 +4,7 @@ pipeline {
         registryCredential = 'Docker-Hub'
         DOCKERHUB_PASS = credentials('Docker-Hub')
         TIMESTAMP = new Date().format("yyyyMMdd_HHmmss")
+        passwd=credentials('password')
     }
     agent any
 
@@ -17,7 +18,7 @@ pipeline {
                         sh 'echo ${BUILD_TIMESTAMP}'
                            
                         
-                        sh 'docker login -u ashritmr -p Ashu&1234'
+                        sh 'docker login -u ashritmr -p ${passwd}'
                         sh 'docker push ashritmr/studentsurvey645:0.1'
                         //docker.withRegistry('',registryCredential){
                             //def customImage = docker.build("ashritmr/studentsurvey645:${env.TIMESTAMP}")
