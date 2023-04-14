@@ -21,7 +21,7 @@ pipeline {
                         sh 'docker push ashritmr/studentsurvey645:0.1'
                         //docker.withRegistry('',registryCredential){
                             //def customImage = docker.build("ashritmr/studentsurvey645:${env.TIMESTAMP}")
-                        }
+                        //}
 
                    }
                 }
