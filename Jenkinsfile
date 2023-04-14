@@ -1,7 +1,4 @@
 pipeline {
-    environment {
-        //DOCKERHUB_PASS = credentials('Docker-Hub')
-    }
     agent any
 
     stages{
@@ -12,8 +9,7 @@ pipeline {
                         sh 'rm -rf *.war'
                         sh 'jar -cvf swe645-assignment1.war -C src/main/webapp/ .'
                         sh 'echo ${BUILD_TIMESTAMP}'
-                        sh 'echo ${DOCKERHUB_PASS}'
-                        sh "docker login -u ashritmr -p '${env.docker}'"
+                        sh "docker login -u ashritmr -p ${env.docker}"
                         sh 'docker build -t ashritmr/studentsurvey645:${BUILD_TIMESTAMP} .'
 
                    }
