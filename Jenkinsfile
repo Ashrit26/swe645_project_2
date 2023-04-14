@@ -19,7 +19,7 @@ pipeline {
                            
                         
                         sh 'docker login -u ashritmr -p "Ashu&1234"'
-                        sh 'docker push ashritmr/studentsurvey645:${env.TIMESTAMP}'
+                        sh 'docker push ashritmr/studentsurvey645:${BUILD_TIMESTAMP}'
                         //docker.withRegistry('',registryCredential){
                             //def customImage = docker.build("ashritmr/studentsurvey645:${env.TIMESTAMP}")
                         //}
@@ -32,7 +32,7 @@ pipeline {
                 steps {
                     script {
                         docker.withRegistry('',registryCredential){
-                          sh "docker push ashritmr/studentsurvey645:${env.TIMESTAMP}"
+                          sh "docker push ashritmr/studentsurvey645:${BUILD_TIMESTAMP}"
                        }
 
                     }
@@ -42,7 +42,7 @@ pipeline {
           stage('Deploying Rancher to single node') {
              steps {
                 script{
-                    sh "kubectl set image deployment/project2nodeport container-0=ashritmr/studentsurvey645:${env.TIMESTAMP}"
+                    sh "kubectl set image deployment/project2nodeport container-0=ashritmr/studentsurvey645:${BUILD_TIMESTAMP}"
                 }
              }
           }
@@ -50,7 +50,7 @@ pipeline {
         stage('Deploying Rancher to Load Balancer') {
            steps {
               script{
-                  sh "kubectl set image deployment/project2loadbalancer container-0=ashritmr/studentsurvey645:${env.TIMESTAMP}"
+                  sh "kubectl set image deployment/project2loadbalancer container-0=ashritmr/studentsurvey645:${BUILD_TIMESTAMP}"
               }
            }
         }
