@@ -13,7 +13,7 @@ pipeline {
                         sh 'jar -cvf swe645-assignment1.war -C src/main/webapp/ .'
                         sh 'echo ${BUILD_TIMESTAMP}'
                         sh 'echo ${DOCKERHUB_PASS}'
-                        sh "docker login -u ashritmr -p ${DOCKERHUB_PASS}"
+                        sh "docker login -u ashritmr -p '${DOCKERHUB_PASS}'"
                         sh 'docker build -t ashritmr/studentsurvey645:${BUILD_TIMESTAMP} .'
 
                    }
