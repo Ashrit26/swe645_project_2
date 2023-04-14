@@ -19,7 +19,7 @@ pipeline {
                            
                         
                         sh 'docker login -u ashritmr -p "Ashu&1234"'
-                        sh 'docker push ashritmr/studentsurvey645:0.1'
+                        sh 'docker push ashritmr/studentsurvey645:${env.TIMESTAMP}'
                         //docker.withRegistry('',registryCredential){
                             //def customImage = docker.build("ashritmr/studentsurvey645:${env.TIMESTAMP}")
                         //}
