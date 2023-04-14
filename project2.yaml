@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "project2"
+  cluster:
+    server: "https://3.223.138.39/k8s/clusters/c-m-nj4fw7dj"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2VENDQ\
+      VdPZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQkdNUnd3R2dZRFZRUUtFeE5rZVc1aGJXbGoKY\
+      kdsemRHVnVaWEl0YjNKbk1TWXdKQVlEVlFRRERCMWtlVzVoYldsamJHbHpkR1Z1WlhJdFkyRkFNV\
+      Fk0TVRReQpOVGcwTURBZUZ3MHlNekEwTVRNeU1qUTBNREJhRncwek16QTBNVEF5TWpRME1EQmFNR\
+      Vl4SERBYUJnTlZCQW9UCkUyUjVibUZ0YVdOc2FYTjBaVzVsY2kxdmNtY3hKakFrQmdOVkJBTU1IV\
+      1I1Ym1GdGFXTnNhWE4wWlc1bGNpMWoKWVVBeE5qZ3hOREkxT0RRd01Ga3dFd1lIS29aSXpqMENBU\
+      VlJS29aSXpqMERBUWNEUWdBRWlGampqbUpZOFN0cQoxVEQ1RUMrR2JPdjBIVFVzdEJwMHAxOEJHV\
+      VRJZzY0ZzdIK2JSS0hMUjNmL0xIUkhGRjYwUWpadXpGMmtDb3JiCkhCdEEweGw3LzZOQ01FQXdEZ\
+      1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93UUZNQU1CQWY4d0hRWUQKVlIwT0JCWUVGT\
+      FhCMDhjUWIyWHIrUUNmalhvaEljSjB2VU8zTUFvR0NDcUdTTTQ5QkFNQ0EwZ0FNRVVDSVFDRwp3M\
+      VpwQUhkRy90U2pSM2V1NDQ2YUlaakFZZGl3NnpqR214dUtrb3UxSmdJZ1NrazlKbWoyK1hoVFJiV\
+      mRaYm92ClNvTFVBanptSm40RGtWZ0dKekM4ODFzPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t"
+
+users:
+- name: "project2"
+  user:
+    token: "kubeconfig-user-wtmmcdk9zf:fvx27trx256pl85ztxrx4mq2dsrsppm9ks6w4c9mpmhfggmpq6dvk6"
+
+
+contexts:
+- name: "project2"
+  context:
+    user: "project2"
+    cluster: "project2"
+
+current-context: "project2"
